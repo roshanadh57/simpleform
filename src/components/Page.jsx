@@ -1,4 +1,4 @@
-import react, { Component } from "react";
+import react, { Component, useEffect } from "react";
 import Form from "./Form";
 import View from "./View";
 import { useState } from "react";
@@ -55,6 +55,10 @@ function Page() {
     });
   }
 
+  const DemoUseEffect = useEffect(()=>{
+      
+  })
+  
   return (
     <div>
       <Form formData={formData} setFormData={setFormData} />
