@@ -20,7 +20,7 @@ function Page() {
     bloodGroup: " ",
   });
 
-  const [tableData, setTableData] = useState(
+  const [tableData, setTableData] = useState([
     {
       semester: "",
       marksObtained: "",
@@ -44,7 +44,7 @@ function Page() {
       percentage: "",
       year: "",
       examinationRollNo: "",
-    }
+    }]
   );
 
   function handleClick(e) {
