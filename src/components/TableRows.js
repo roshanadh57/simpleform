@@ -1,5 +1,6 @@
-function TableRows({ rowsData, deleteTableRows, handleChange }) {
-  return rowsData.map((index, data) => {
+function TableRows({ formData, deleteTableRows, handleChange }) {
+
+  return formData.educationData.map((data, index) => {
     const { semester,marksObtained,maximumMarks,percentage, year, examinationRollNo } = data;
     return (
       <tr key={index}>
@@ -59,6 +60,7 @@ function TableRows({ rowsData, deleteTableRows, handleChange }) {
         </td>
         <td>
           <button
+            className="btn btn-outline-danger"
             onClick={() => deleteTableRows(index)}
           >
             x

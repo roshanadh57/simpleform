@@ -1,4 +1,4 @@
-import react from "react";
+import react, { useEffect } from "react";
 import Form from "./Form";
 import AddDeleteTableRows from "./AddDeleteTableRows";
 import { useState } from "react";
@@ -18,26 +18,31 @@ function Page() {
     income: " ",
     adharCard: " ",
     bloodGroup: " ",
-    educationData:[],
+    educationData: [
+      {
+        semester: "",
+        marksObtained: "",
+        maximumMarks: "",
+        percentage: "",
+        year: "",
+        examinationRollNo: "",
+      },
+    ],
   });
-
-  const [rowsData, setRowsData] = useState([]);
 
   function handleClick(e) {
     e.preventDefault();
     console.log({
-      ...formData
+      ...formData,
     });
   }
 
-  // const DemoUseEffect = useEffect(()=>{
-
-  // })
+  // console.log( typeof formData)
 
   return (
     <div>
       <Form formData={formData} setFormData={setFormData} />
-      <AddDeleteTableRows rowsData={rowsData} setRowsData={setRowsData} />
+      <AddDeleteTableRows formData={formData} setFormData={setFormData} />
       <button onClick={handleClick}>Submit</button>
     </div>
   );

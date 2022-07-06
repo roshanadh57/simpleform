@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TableRows from "./TableRows";
 function AddDeleteTableRows(props) {
-  const { rowsData, setRowsData } = props;
+  const { formData, setFormData } = props;
 
   const addTableRows = () => {
     const rowsInput = {
@@ -12,19 +12,22 @@ function AddDeleteTableRows(props) {
       year: "",
       examinationRollNo: "",
     };
-    setRowsData([...rowsData, rowsInput]);
+    setFormData({
+      ...formData,
+      educationData: [...formData.educationData, rowsInput],
+    });
   };
   const deleteTableRows = (index) => {
-    const rows = [...rowsData];
+    const rows = [...formData.educationData];
     rows.splice(index, 1);
-    setRowsData(rows);
+    setFormData(rows);
   };
-
+  
   const handleChange = (index, evnt) => {
     const { name, value } = evnt.target;
-    const rowsInput = [...rowsData];
+    const rowsInput = [...formData.educationData];
     rowsInput[index][name] = value;
-    setRowsData(rowsInput);
+    setFormData({ ...formData, educationData: rowsInput });
   };
 
   return (
@@ -47,7 +50,7 @@ function AddDeleteTableRows(props) {
             </thead>
             <tbody>
               <TableRows
-                rowsData={rowsData}
+                formData={formData}
                 deleteTableRows={deleteTableRows}
                 handleChange={handleChange}
               />
