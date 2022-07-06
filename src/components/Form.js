@@ -1,15 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import View from "./View";
-import { tableData } from "./View";
+//import AddDeleteTableRows from "./components/AddDeleteTableRows.js";
+//import { tableData } from "./View";
 
 function Form(props) {
   const { setFormData, formData } = props;
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log(formData);
-  };
 
   const handleChange = (e) => {
     setFormData({
@@ -20,7 +15,7 @@ function Form(props) {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form>
         <label>1. Name of the candidate </label>
         <input type="text" name="userName" onChange={handleChange} />
         <br />
