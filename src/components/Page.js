@@ -4,6 +4,7 @@ import AddDeleteTableRows from "./AddDeleteTableRows";
 import { useState } from "react";
 
 function Page() {
+  //this is the state to save the value in formData
   const [formData, setFormData] = useState({
     userName: " ",
     fatherName: " ",
@@ -19,17 +20,18 @@ function Page() {
     adharCard: " ",
     bloodGroup: " ",
     educationData: [
-      {
-        semester: "",
-        marksObtained: "",
-        maximumMarks: "",
-        percentage: "",
-        year: "",
-        examinationRollNo: "",
-      },
+      // {
+      //   semester: "",
+      //   marksObtained: "",
+      //   maximumMarks: "",
+      //   percentage: "",
+      //   year: "",
+      //   examinationRollNo: "",
+      // },
     ],
   });
 
+  //this function is to print value of formData in the console
   function handleClick(e) {
     e.preventDefault();
     console.log({

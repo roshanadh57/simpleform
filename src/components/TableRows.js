@@ -1,7 +1,13 @@
 function TableRows({ formData, deleteTableRows, handleChange }) {
-
   return formData.educationData.map((data, index) => {
-    const { semester,marksObtained,maximumMarks,percentage, year, examinationRollNo } = data;
+    const {
+      semester,
+      marksObtained,
+      maximumMarks,
+      percentage,
+      year,
+      examinationRollNo,
+    } = data;
     return (
       <tr key={index}>
         <td>
@@ -10,7 +16,6 @@ function TableRows({ formData, deleteTableRows, handleChange }) {
             value={semester}
             onChange={(evnt) => handleChange(index, evnt)}
             name="semester"
-            className="form-control"
           />
         </td>
         <td>
@@ -19,7 +24,6 @@ function TableRows({ formData, deleteTableRows, handleChange }) {
             value={marksObtained}
             onChange={(evnt) => handleChange(index, evnt)}
             name="marksObtained"
-            className="form-control"
           />{" "}
         </td>
         <td>
@@ -28,7 +32,6 @@ function TableRows({ formData, deleteTableRows, handleChange }) {
             value={maximumMarks}
             onChange={(evnt) => handleChange(index, evnt)}
             name="maximumMarks"
-            className="form-control"
           />{" "}
         </td>
         <td>
@@ -37,7 +40,6 @@ function TableRows({ formData, deleteTableRows, handleChange }) {
             value={percentage}
             onChange={(evnt) => handleChange(index, evnt)}
             name="percentage"
-            className="form-control"
           />{" "}
         </td>
         <td>
@@ -46,7 +48,6 @@ function TableRows({ formData, deleteTableRows, handleChange }) {
             value={year}
             onChange={(evnt) => handleChange(index, evnt)}
             name="year"
-            className="form-control"
           />{" "}
         </td>
         <td>
@@ -55,16 +56,10 @@ function TableRows({ formData, deleteTableRows, handleChange }) {
             value={examinationRollNo}
             onChange={(evnt) => handleChange(index, evnt)}
             name="examinationRollNo"
-            className="form-control"
           />{" "}
         </td>
         <td>
-          <button
-            className="btn btn-outline-danger"
-            onClick={() => deleteTableRows(index)}
-          >
-            x
-          </button>
+          <button onClick={() => deleteTableRows(index)}>x</button>
         </td>
       </tr>
     );

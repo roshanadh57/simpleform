@@ -1,11 +1,10 @@
 import React from "react";
-import { useState } from "react";
-//import AddDeleteTableRows from "./components/AddDeleteTableRows.js";
-//import { tableData } from "./View";
 
+//incoming formData value as a props
 function Form(props) {
   const { setFormData, formData } = props;
 
+  //getting value of input field from the form
   const handleChange = (e) => {
     setFormData({
       ...formData,
