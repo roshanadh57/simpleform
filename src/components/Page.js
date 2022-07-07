@@ -20,14 +20,14 @@ function Page() {
     adharCard: " ",
     bloodGroup: " ",
     educationData: [
-      // {
-      //   semester: "",
-      //   marksObtained: "",
-      //   maximumMarks: "",
-      //   percentage: "",
-      //   year: "",
-      //   examinationRollNo: "",
-      // },
+      {
+        semester: "",
+        marksObtained: "",
+        maximumMarks: "",
+        percentage: "",
+        year: "",
+        examinationRollNo: "",
+      },
     ],
   });
 

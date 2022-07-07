@@ -4,7 +4,7 @@ import TableRows from "./TableRows";
 function AddDeleteTableRows(props) {
   const { formData, setFormData } = props;
 
-  //this function work to add a table rows.
+  //this function work to add a table rows
   const addTableRows = () => {
     const rowsInput = {
       semester: "",
